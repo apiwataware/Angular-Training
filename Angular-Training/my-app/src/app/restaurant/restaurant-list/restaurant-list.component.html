@@ -1,0 +1,20 @@
+<div>
+    <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Tables</th>
+            <th scope="col">Status</th>
+            <th scope="col">Booking Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let detail of restaurantData; let i = index">
+            <td>{{detail.name}}</td>
+            <td>{{detail.tables}}</td>
+            <td>{{detail.statusOpen}}</td>
+            <td><app-restaurant-detail [bookingTimes]='detail.bookingTimes'></app-restaurant-detail></td>
+          </tr>
+        </tbody>
+      </table>
+</div>
